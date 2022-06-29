@@ -1,37 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  Score
-  Rules
+    <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
-  You Picked
-  The House Picked
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Barlow+Semi+Condensed"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="main bd1px">
+      <!-- scoreboard -->
+      <div class="scoreboard bd1px">
+        <div class="gameName">
+          ROCK <br />
+          PAPER <br />
+          SCISSORS
+        </div>
 
-  You Win
-  You Lose
+        <div id="scoreDisplay bd1px" class="scoreDisplay">
+          <div>SCORE</div>
+          <div class="score">0</div>
+        </div>
+      </div>
 
-  Play Again
+      <!-- Rock paper scisccors landing 'image' -->
+      <div class="gameIntro bd1px">
+        <img src="./images/Intro.svg" alt="" />
+      </div>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+      <div class="gamePlayInterface hidden">
+        <div class="playersPickDisplay">
+          <div>YOU PICKED</div>
+          <div class="pickImage">
+            <img
+              id="playersPick"
+              class="hidden"
+              src="./images/Rock.svg"
+              alt=""
+            />
+            <div class="choice">
+              <img class="hidden" id="Paper" src="./images/Paper.svg" alt="" />
+              <img class="hidden" id="Rock" src="./images/Rock.svg" alt="" />
+              <img
+                class="hidden"
+                id="Scissors"
+                src="./images/Scissors.svg"
+                alt=""
+              />
+            </div>
+            <div class="playersPick ripple1"></div>
+            <div class="playersPick ripple2"></div>
+            <div class="playersPick ripple3"></div>
+          </div>
+        </div>
+        <div class="roundResultDisplay hidden">
+          <div class="roundResult"></div>
+          <div>
+            <button class="playAgain">PLAY AGAIN</button>
+          </div>
+        </div>
+        <div class="housesPickDisplay">
+          <div>HOUSE PICKED</div>
+          <div class="pickImage">
+            <img
+              id="housesPickImg"
+              class="hidden"
+              src="./images/Rock.svg"
+              alt=""
+            />
+            <div class="housesPick ripple1"></div>
+            <div class="housesPick ripple2"></div>
+            <div class="housesPick ripple3"></div>
+          </div>
+        </div>
+      </div>
 
+      <div class="rules bd1px">
+        <button id="ruleButton">Rules</button>
+      </div>
+      <div class="rulesOverlay hidden">
+        <div class="ruleImgContainer">
+          <div class="rulesTitle">
+            <div>Rules</div>
+            <div class="cancelViewingRules">
+              <img src="./images/x-symbol-svgrepo-com.svg" alt="" />
+            </div>
+          </div>
+          <img src="./images/image-rules.svg" alt="" />
+        </div>
+      </div>
+    </div>
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>

@@ -1,0 +1,244 @@
+body {
+  font-family: "Barlow Semi Condensed", serif;
+}
+
+div.main {
+  width: 100%;
+  height: 100vh;
+  background-color: #0d1424;
+  color: white;
+  font-size: 50px;
+  font-weight: 600;
+  background-image: linear-gradient(
+    to bottom,
+    #1f3656,
+    #1d3050,
+    #1a294b,
+    #192345,
+    #171d3f
+  );
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* scoreboard */
+
+.scoreboard {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  height: 20%;
+  padding: 35px 35px 35px 35px;
+  border: solid 3px #5a6980;
+  border-radius: 20px;
+  margin-top: 2.5%;
+}
+
+.gameName {
+  line-height: 90%;
+}
+
+.scoreDisplay {
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  padding: 10px 20px 10px 20px;
+  width: 15%;
+}
+
+.scoreDisplay > div:nth-child(1) {
+  color: #39478e;
+  font-size: 20px;
+  font-weight: bolder;
+  text-align: center;
+}
+
+.scoreDisplay > div:nth-child(2) {
+  font-size: 60px;
+  margin: auto;
+  text-align: center;
+  color: #524e65;
+  font-weight: bold;
+}
+
+/* Rock paper scisccors landing 'image' */
+
+.gameIntro {
+  width: 80%;
+  height: 50%;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+
+.rules {
+  width: 80%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  margin-bottom: 2.5%;
+}
+
+.rules > button {
+  background-color: white;
+  color: rgb(203, 181, 181);
+  border-radius: 20px;
+  font-size: 2rem;
+  height: 50px;
+  width: 150px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.rulesOverlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(158, 151, 151, 0.3);
+}
+
+.ruleImgContainer {
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 2rem 2rem 2rem 2rem;
+  border-radius: 40px;
+}
+
+.rulesTitle {
+  color: rgb(49, 49, 125);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.cancelViewingRules {
+  height: 10%;
+  width: 10%;
+}
+
+.gamePlayInterface {
+  width: 80%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.playersPickDisplay,
+.housesPickDisplay {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.roundResultDisplay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.roundResultDisplay div {
+  width: 100%;
+  text-align: center;
+}
+
+.pickImage {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  border-radius: 100%;
+}
+.pickImage img {
+  position: relative;
+  width: 20rem;
+  height: 20rem;
+  z-index: 15;
+}
+
+.ripple1,
+.ripple2,
+.ripple3 {
+  width: 15rem;
+  height: 15rem;
+  position: absolute;
+  z-index: 10;
+  top: 2.5rem;
+  left: 2.5rem;
+  border: 40px solid white;
+  border-radius: 100%;
+}
+
+@keyframes ripple1 {
+  from {
+    transform: scale(1, 1);
+    border-color: white;
+    background-color: rgba(red, green, blue, 0);
+  }
+
+  to {
+    transform: scale(3, 3);
+    border-color: rgba(0, 0, 0, 0);
+    background-color: rgba(red, green, blue, 0);
+  }
+}
+
+.ripple1.rippleOn {
+  animation-name: ripple1;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+.ripple2.rippleOn {
+  animation-name: ripple1;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+.ripple3.rippleOn {
+  animation-name: ripple1;
+  animation-duration: 3s;
+  animation-fill-mode: forwards;
+}
+
+.choice {
+  position: absolute;
+  z-index: 13;
+  width: 16rem;
+  height: 16rem;
+  top: 2rem;
+  left: 2rem;
+  border-radius: 100%;
+  background-color: #181848;
+
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+#choosePaper,
+#chooseRock,
+#chooseScissors {
+  width: 50%;
+}
+
+.hidden {
+  display: none;
+}
+
+button.playAgain {
+  border-radius: 30px;
+  font-size: 3rem;
+  padding: 10px 15px 10px 15px;
+}
+
+/* debug */
+
+.bd1px {
+}
